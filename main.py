@@ -60,7 +60,7 @@ async def get_players():
     return posts_store
 
 
-@app.put("/players", response_model=List[Posts], status_code=status.HTTP_200_OK)
+@app.put("/posts", response_model=List[Posts], status_code=status.HTTP_200_OK)
 async def update_or_create_players(players: List[Posts]):
     updated = False
     new_post = []
